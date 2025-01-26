@@ -20,7 +20,7 @@ public class SampleGlobalFilter implements GlobalFilter {
         logger.info("Filter executing before to the request PRE");
 
         return chain.filter(exchange).then(Mono.fromRunnable(() -> {
-            logger.info("Filter executing after to the request POST"):
+            logger.info("Filter executing after to the request POST");
 
             exchange.getResponse().getCookies().add("color", ResponseCookie.from("color","red").build());
             exchange.getResponse().getHeaders().setContentType(MediaType.TEXT_PLAIN);
