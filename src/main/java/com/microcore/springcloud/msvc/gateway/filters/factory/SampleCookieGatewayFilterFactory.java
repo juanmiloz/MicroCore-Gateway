@@ -8,6 +8,8 @@ import org.springframework.http.ResponseCookie;
 import org.springframework.stereotype.Component;
 import reactor.core.publisher.Mono;
 
+import java.util.Arrays;
+import java.util.List;
 import java.util.Optional;
 
 @Component
@@ -33,7 +35,10 @@ public class SampleCookieGatewayFilterFactory extends AbstractGatewayFilterFacto
         });
     }
 
-
+    @Override
+    public List<String> shortcutFieldOrder() {
+        return Arrays.asList("message", "name", "value");
+    }
 
     public static class ConfigurationCookie {
         private String name;
