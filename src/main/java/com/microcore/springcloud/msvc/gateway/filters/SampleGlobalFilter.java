@@ -36,7 +36,7 @@ public class SampleGlobalFilter implements GlobalFilter, Ordered {
 
             Optional.ofNullable(mutatedExchange.getRequest().getHeaders().getFirst("token")).ifPresent(value -> {
                 logger.info("Token in the response: " + value);
-                mutatedExchange.getResponse().getHeaders().add("token", value);
+                mutatedExchange.getResponse().getHeaders().add("token2", value);
             });
 
             mutatedExchange.getResponse().getCookies().add("color", ResponseCookie.from("color", "red").build());
