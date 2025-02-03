@@ -40,6 +40,11 @@ public class SampleCookieGatewayFilterFactory extends AbstractGatewayFilterFacto
         return Arrays.asList("message", "name", "value");
     }
 
+    @Override
+    public String name() {
+        return "EjemploCookie";
+    }
+
     public static class ConfigurationCookie {
         private String name;
         private String value;

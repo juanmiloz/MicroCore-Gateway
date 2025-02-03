@@ -40,7 +40,7 @@ public class SampleGlobalFilter implements GlobalFilter, Ordered {
             });
 
             mutatedExchange.getResponse().getCookies().add("color", ResponseCookie.from("color", "red").build());
-            mutatedExchange.getResponse().getHeaders().setContentType(MediaType.TEXT_PLAIN);
+//            mutatedExchange.getResponse().getHeaders().setContentType(MediaType.TEXT_PLAIN);
         }));
     }
 

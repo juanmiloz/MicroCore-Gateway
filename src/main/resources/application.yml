@@ -8,7 +8,7 @@ spring:
             - Path=/api/product/**
           filters:
             - StripPrefix=2
-            - SampleCookie=Hi this is my personalized message, user, Juan
+            - EjemploCookie=Hi this is my personalized message, user, Juan
 #            - name: SampleCookie
 #              args:
 #                name: user
