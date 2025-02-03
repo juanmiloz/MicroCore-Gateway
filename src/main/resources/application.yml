@@ -8,6 +8,7 @@ spring:
             - Path=/api/product/**
           filters:
             - StripPrefix=2
+            - name:
         - id: msvc-items
           uri: lb://msvc-items
           predicates:
